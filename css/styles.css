@@ -35,7 +35,11 @@ header {
   background-color: var(--white);
 }
 
-nav {
+header {
+  border-bottom: 1px solid var(--grey-white);
+}
+
+.header {
   display: flex;
   align-items: center;
 }
@@ -53,6 +57,10 @@ nav {
   top: 24px;
 
   /* text-shadow: 0px 4px 4px var(--black-op25);  добавление тени для логотипа, включу потом*/
+}
+
+.logo-header {
+  display: block;
 }
 
 .logo:hover,
@@ -439,17 +447,37 @@ footer {
 /* ==PORTFOLIO FILE==*/
 /*main portfolio */
 
+.buttons-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
+
 .portfolio-buttons {
+  display: flex;
   list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  justify-content: center;
+}
+.portfolio-buttons .portfolio-button-item {
+  display: flex;
+}
+
+.portfolio-buttons .portfolio-button-item + .portfolio-button-item {
+  margin-left: 8px;
 }
 
 .portfolio-buttons button:focus,
 .portfolio-buttons button:hover {
   color: var(--white);
   background-color: var(--blue);
+  border: none;
 }
 
 .portfolio-button-text {
+  display: block;
   color: var(--pre-black);
   background-color: var(--light-grey-white);
   font-family: inherit;
@@ -457,6 +485,9 @@ footer {
   font-weight: 500;
   line-height: 1.63;
   letter-spacing: 0.03em;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
 }
 
 .container-cards {
