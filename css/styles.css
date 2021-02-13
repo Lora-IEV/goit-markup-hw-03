@@ -18,7 +18,20 @@ body {
 /*header*/
 
 header {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 215px;
+  padding-right: 215px;
+
   background-color: var(--white);
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -32,6 +45,7 @@ header {
   width: 145px;
   left: 215px;
   top: 24px;
+
   /* text-shadow: 0px 4px 4px var(--black-op25);  добавление тени для логотипа, включу потом*/
 }
 
@@ -49,7 +63,22 @@ header {
 }
 
 .header-nav {
+  display: flex;
+  margin-left: 93px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+
   list-style-type: none; /* Убираем маркеры */
+}
+
+.header-nav .nav-item + .nav-item {
+  margin-left: 50px;
+}
+
+.header-nav .link {
+  display: block;
+  padding-bottom: 32px;
+  padding-top: 32px;
 }
 
 .header-nav a {
@@ -76,7 +105,25 @@ header {
 }
 
 .header-address {
+  display: flex;
+  margin-bottom: 0px;
+  margin-top: 0px;
+
   list-style-type: none; /* Убираем маркеры */
+}
+
+address {
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 0px;
+}
+
+.header-address .address-item + .address-item {
+  margin-left: 50px;
+}
+
+.header-address .address-item {
+  padding: 32px 0px;
 }
 
 .header-address a {
@@ -99,13 +146,20 @@ header {
 }
 
 /*end header*/
-/*hero*/
+/* == HERO == */
 
 .hero {
   background-color: var(--dark-grey);
+  width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-title {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  padding-top: 200px;
   color: var(--white);
   text-transform: uppercase;
   font-size: 44px;
@@ -116,6 +170,7 @@ header {
 }
 
 .button-hero {
+  display: inline-block;
   font-family: inherit;
   color: var(--white);
   background-color: var(--blue);
@@ -123,16 +178,25 @@ header {
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  text-align: center;
+  padding: 10px 32px;
+  border-radius: 6px;
+  border: none;
 }
 
 .button-text {
   text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 /*end hero*/
 
 /*section Наши преимущества */
+
+.container {
+  display: flex;
+  justify-content: center;
+}
 
 .visually-hidden {
   position: absolute;
@@ -148,7 +212,20 @@ header {
   overflow: hidden;
 }
 
+.list-advantages {
+  margin: 0px;
+  padding: 0px;
+  width: 370px;
+}
+
+.our-advantages .list-advantages + .list-advantages {
+  margin-left: 30px;
+}
+
 .our-advantages h3 {
+  margin-top: 94px;
+  margin-bottom: 10px;
+  padding: 0px;
   color: var(--pre-black);
   font-size: 14px;
   font-weight: 700;
@@ -159,6 +236,8 @@ header {
 }
 
 .our-advantages p {
+  margin: 0px;
+  padding: 0px;
   color: var(--grey);
   font-size: 14px;
   font-weight: 400;
@@ -168,6 +247,10 @@ header {
 }
 
 .our-advantages {
+  display: flex;
+  margin: 0px;
+  width: 1170px;
+  padding: 0 15px;
   list-style-type: none; /* Убираем маркеры */
 }
 
@@ -175,6 +258,8 @@ header {
 /* чем мы занимаемся */
 
 .what-we-do {
+  margin-top: 94px;
+  margin-bottom: 50px;
   color: var(--pre-black);
   font-size: 36px;
   font-weight: 700;
@@ -184,7 +269,23 @@ header {
 }
 
 .what-we-do-images {
+  width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 94px;
+  margin-left: auto;
+  margin-right: auto;
   list-style-type: none; /* Убираем маркеры */
+}
+
+.what-we-do-images .what-we-do-item + .what-we-do-item {
+  margin-left: 30px;
+}
+
+.what-we-do-images img {
+  display: block;
 }
 
 /* end чем мы занимаемся */
@@ -192,9 +293,16 @@ header {
 
 .team-section {
   background-color: var(--light-grey-white);
+  width: 1600px;
+  height: 648px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team {
+  margin-top: 0px;
+  padding-top: 94px;
+  margin-bottom: 50px;
   color: var(--pre-black);
   font-size: 36px;
   font-weight: 700;
@@ -203,7 +311,31 @@ header {
   text-align: center;
 }
 
+.list-team .team-item + .team-item {
+  margin-left: 30px;
+}
+
+.name {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.position {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
 .list-team {
+  width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 94px;
+  margin-left: auto;
+  margin-right: auto;
   list-style-type: none; /* Убираем маркеры */
 }
 
@@ -223,11 +355,24 @@ header {
   letter-spacing: 0.03em;
 }
 
+.list-team img {
+  display: block;
+}
+
 /*end our team*/
 /*footer*/
 
 footer {
   background-color: var(--dark-grey);
+  width: 1600px;
+  height: 252px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer-container {
+  margin-left: 215px;
+  padding-top: 60px;
 }
 
 .footer-logo {
@@ -244,7 +389,15 @@ footer {
   color: var(--white);
 }
 
+.footer-box {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
 .address-footer {
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-family: inherit;
   color: var(--white);
   font-size: 14px;
@@ -256,7 +409,14 @@ footer {
 }
 
 .footer-contacts {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
   list-style-type: none; /* Убираем маркеры */
+}
+
+.footer-contacts-item {
+  margin-top: 9px;
 }
 
 .footer-contacts a {
