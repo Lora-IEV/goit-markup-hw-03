@@ -21,46 +21,47 @@ img {
   height: auto;
 }
 
-/*header*/
+/*====== HEADER ========*/
 
-header {
+.header-container {
   display: flex;
-  align-items: center;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 215px;
-  padding-right: 215px;
-
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: center;
   background-color: var(--white);
 }
 
-header {
-  border-bottom: 1px solid var(--grey-white);
-}
-
-.header {
+nav {
   display: flex;
   align-items: center;
 }
 
+.header-nav {
+  display: flex;
+  margin-left: 93px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-left: 0px;
+  align-items: center;
+
+  list-style-type: none; /* Убираем маркеры */
+}
+
 .logo {
+  display: flex;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-decoration: none;
-  height: 31px;
-  width: 145px;
-  left: 215px;
-  top: 24px;
+  padding-bottom: 24px;
+  padding-top: 25px;
 
   /* text-shadow: 0px 4px 4px var(--black-op25);  добавление тени для логотипа, включу потом*/
-}
-
-.logo-header {
-  display: block;
 }
 
 .logo:hover,
@@ -74,15 +75,6 @@ header {
 
 .studio-logo {
   color: var(--black);
-}
-
-.header-nav {
-  display: flex;
-  margin-left: 93px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-
-  list-style-type: none; /* Убираем маркеры */
 }
 
 .header-nav .nav-item + .nav-item {
@@ -136,7 +128,7 @@ address {
   margin-left: 50px;
 }
 
-.header-address .address-item {
+.item-link-address {
   padding: 32px 0px;
 }
 
@@ -159,21 +151,27 @@ address {
   color: var(--blue);
 }
 
-/*end header*/
+/*=========== END HEADER ======*/
+
 /* == HERO == */
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
   background-color: var(--dark-grey);
-  width: 1600px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
+  border-top: 1px solid var(--grey-white);
 }
 
 .hero-title {
   margin-top: 0px;
-  margin-bottom: 40px;
-  padding-top: 200px;
+  margin-bottom: 0px;
+  padding-bottom: 40px;
   color: var(--white);
   text-transform: uppercase;
   font-size: 44px;
@@ -197,12 +195,6 @@ address {
   border: none;
 }
 
-.button-text {
-  text-align: center;
-  margin-bottom: 0px;
-  margin-top: 0px;
-}
-
 /*end hero*/
 
 /*section Наши преимущества */
@@ -210,6 +202,7 @@ address {
 .container {
   display: flex;
   justify-content: center;
+  padding-top: 94px;
 }
 
 .visually-hidden {
@@ -229,7 +222,7 @@ address {
 .list-advantages {
   margin: 0px;
   padding: 0px;
-  width: 370px;
+  width: 270px;
 }
 
 .our-advantages .list-advantages + .list-advantages {
@@ -237,7 +230,7 @@ address {
 }
 
 .our-advantages h3 {
-  margin-top: 94px;
+  margin-top: 0px;
   margin-bottom: 10px;
   padding: 0px;
   color: var(--pre-black);
@@ -272,8 +265,10 @@ address {
 /* чем мы занимаемся */
 
 .what-we-do {
-  margin-top: 94px;
-  margin-bottom: 50px;
+  padding-top: 94px;
+  padding-bottom: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   color: var(--pre-black);
   font-size: 36px;
   font-weight: 700;
@@ -288,9 +283,10 @@ address {
   padding-left: 15px;
   display: flex;
   margin-top: 0px;
-  margin-bottom: 94px;
+  margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 94px;
   list-style-type: none; /* Убираем маркеры */
 }
 
@@ -316,7 +312,8 @@ address {
 .team {
   margin-top: 0px;
   padding-top: 94px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
+  padding-bottom: 50px;
   color: var(--pre-black);
   font-size: 36px;
   font-weight: 700;
@@ -347,7 +344,8 @@ address {
   padding-left: 15px;
   display: flex;
   margin-top: 0px;
-  margin-bottom: 94px;
+  margin-bottom: 0px;
+  padding-bottom: 94px;
   margin-left: auto;
   margin-right: auto;
   list-style-type: none; /* Убираем маркеры */
@@ -450,8 +448,9 @@ footer {
 .buttons-container {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 94px;
-  margin-bottom: 50px;
+  padding-top: 94px;
+  padding-bottom: 50px;
+  border-top: 1px solid var(--grey-white);
 }
 
 .portfolio-buttons {
@@ -510,7 +509,7 @@ footer {
 }
 
 .all-progects > .item {
-  flex-basis: calc(100% / 3 -30px);
+  flex-basis: calc(100% / 3 - 30px);
   margin-top: 30px;
   margin-left: 30px;
 }
