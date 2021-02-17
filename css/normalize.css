@@ -15,6 +15,10 @@ Use a better box model (opinionated).
   box-sizing: border-box;
 }
 
+h5 {
+  color: crimson;
+}
+
 ​/**
 Use a more readable tab size (opinionated).
 */

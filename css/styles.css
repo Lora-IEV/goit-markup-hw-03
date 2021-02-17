@@ -24,6 +24,7 @@ img {
 /*====== HEADER ========*/
 
 .header-container {
+  box-sizing: border-box;
   display: flex;
   width: 1200px;
   margin-left: auto;
@@ -114,6 +115,7 @@ nav {
   display: flex;
   margin-bottom: 0px;
   margin-top: 0px;
+  padding-left: 0px;
 
   list-style-type: none; /* Убираем маркеры */
 }
@@ -156,13 +158,10 @@ address {
 /* == HERO == */
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--dark-grey);
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   border-top: 1px solid var(--grey-white);
@@ -170,8 +169,7 @@ address {
 
 .hero-title {
   margin-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 40px;
+  margin-bottom: 30px;
   color: var(--white);
   text-transform: uppercase;
   font-size: 44px;
@@ -182,7 +180,10 @@ address {
 }
 
 .button-hero {
-  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
   font-family: inherit;
   color: var(--white);
   background-color: var(--blue);
@@ -198,6 +199,16 @@ address {
 /*end hero*/
 
 /*section Наши преимущества */
+
+.advantages-container {
+  display: flex;
+  width: 1200px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 .container {
   display: flex;
@@ -257,14 +268,26 @@ address {
   display: flex;
   margin: 0px;
   width: 1170px;
-  padding: 0 15px;
+  padding: 0px;
   list-style-type: none; /* Убираем маркеры */
 }
 
 /* end Наши преимущества */
 /* чем мы занимаемся */
 
+.we-do-container {
+  display: flex;
+  width: 1200px;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .what-we-do {
+  display: flex;
   padding-top: 94px;
   padding-bottom: 50px;
   margin-top: 0px;
@@ -275,18 +298,18 @@ address {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
+  justify-content: center;
 }
 
 .what-we-do-images {
-  width: 1170px;
-  padding-right: 15px;
-  padding-left: 15px;
+  justify-content: space-between;
   display: flex;
   margin-top: 0px;
   margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0px;
+  margin-right: 0px;
   padding-bottom: 94px;
+  padding-left: 0px;
   list-style-type: none; /* Убираем маркеры */
 }
 
@@ -301,10 +324,19 @@ address {
 /* end чем мы занимаемся */
 /*our team*/
 
+.team-container {
+  display: flex;
+  width: 1200px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  flex-direction: column;
+}
+
 .team-section {
   background-color: var(--light-grey-white);
-  width: 1600px;
-  height: 648px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -339,15 +371,14 @@ address {
 }
 
 .list-team {
-  width: 1170px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0px;
+  padding-left: 0px;
   display: flex;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-bottom: 94px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0px;
+  margin-right: 0px;
   list-style-type: none; /* Убираем маркеры */
 }
 
@@ -367,7 +398,7 @@ address {
   letter-spacing: 0.03em;
 }
 
-.list-team img {
+.team-item img {
   display: block;
 }
 
@@ -376,18 +407,23 @@ address {
 
 footer {
   background-color: var(--dark-grey);
-  width: 1600px;
-  height: 252px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .footer-container {
-  margin-left: 215px;
+  display: flex;
+  width: 1200px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  flex-direction: column;
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-logo {
+  display: inline-block;
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
   font-weight: 700;
@@ -395,6 +431,7 @@ footer {
   letter-spacing: 0.03em;
   text-align: left;
   text-decoration: none;
+  margin-bottom: 20px;
 }
 
 .logo-studio {
@@ -402,12 +439,12 @@ footer {
 }
 
 .footer-box {
-  display: flex;
-  margin-top: 20px;
-  flex-direction: column;
+  display: block;
+  margin-left: 0px;
 }
 
 .address-footer {
+  display: block;
   margin-top: 0px;
   margin-bottom: 0px;
   font-family: inherit;
@@ -417,10 +454,11 @@ footer {
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-align: left;
-  text-indent: ;
 }
 
 .footer-contacts {
+  display: block;
+  flex-direction: column;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-left: 0px;
@@ -428,6 +466,7 @@ footer {
 }
 
 .footer-contacts-item {
+  display: flex;
   margin-top: 9px;
 }
 
@@ -445,6 +484,16 @@ footer {
 /* ==PORTFOLIO FILE==*/
 /*main portfolio */
 
+.portfolio-container {
+  display: flex;
+  width: 1200px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .buttons-container {
   margin-left: auto;
   margin-right: auto;
@@ -460,6 +509,7 @@ footer {
   margin: 0px;
   justify-content: center;
 }
+
 .portfolio-buttons .portfolio-button-item {
   display: flex;
 }
@@ -488,6 +538,8 @@ footer {
   border-radius: 4px;
   padding: 6px 22px;
 }
+
+/*== All Projects ==*/
 
 .container-cards {
   width: 1200px;
