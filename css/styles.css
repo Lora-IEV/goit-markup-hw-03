@@ -10,6 +10,8 @@
   --grey-white: rgba(236, 236, 236, 1);
   --light-grey-white: rgba(245, 244, 250, 1);
   --black-op25: rgba(0, 0, 0, 0.25);
+  --team-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -309,6 +311,7 @@ header {
 .team-container {
   flex-direction: column;
   padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .team-section {
@@ -343,7 +346,7 @@ header {
 }
 
 .team-card {
-  padding: 30px 0px;
+  padding: 30px 15px;
   text-align: center;
 }
 
@@ -352,7 +355,6 @@ header {
   padding-left: 0px;
   display: flex;
   margin: 0px;
-  padding-bottom: 94px;
   list-style-type: none; /* Убираем маркеры */
 }
 
@@ -378,6 +380,9 @@ header {
 
 .team-item {
   width: 270px;
+  background: var(--white);
+  box-shadow: var(--team-shadow);
+  border-radius: 0px 0px 4px 4px;
 }
 
 /*end our team*/
@@ -476,7 +481,7 @@ footer {
   padding: 0px;
   margin: 0px;
   justify-content: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .portfolio-buttons .portfolio-button-item {
